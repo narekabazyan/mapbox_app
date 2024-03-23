@@ -1,0 +1,31 @@
+.navigation{
+  flex: 0 0 auto;
+  display: flex;
+  height: 56px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 0 16px 0 rgba(#000000, 0.16);
+}
+.navigationColumn{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  height: 100%;
+  color: #4D4D50;
+  transition: color 240ms;
+  &.active{
+    color: #1329FE;
+  }
+}
+.navigationIcon{
+  flex: 0 0 auto;
+  font-size: 22px;
+}
+.navigationName{
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+}

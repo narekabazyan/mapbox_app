@@ -1,0 +1,64 @@
+.marker{
+  width: auto;
+  text-align: center;
+  transform: translate(0, -14px);
+}
+
+.markerImg{
+  width: 26px;
+  height: 36px;
+  position: relative;
+  background-image: url("../../../assets/images/marker.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-bottom: 1px solid transparent;
+  &.fill {
+    background-image: url("../../../assets/images/markerFill.png");
+    .markerNumber{
+      color: #ffffff;
+    }
+  }
+}
+
+.markerNumber{
+  display: block;
+  width: 100%;
+  font-size: 10px;
+  padding-top: 3px;
+  font-weight: bold;
+  color: #202124;
+  text-align: center;
+}
+
+.markerCircle{
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(#202124, 0.16);
+  &:after,
+  &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+  }
+  &:before{
+    width: 80%;
+    height: 80%;
+    background-color: #ffffff;
+  }
+  &:after{
+    width: 60%;
+    height: 60%;
+    background-color: #1329FE;
+  }
+}

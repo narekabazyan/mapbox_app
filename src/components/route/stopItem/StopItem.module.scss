@@ -1,0 +1,105 @@
+.routeRow{
+  width: 100%;
+  border-bottom: 1px solid #EAEBF0;
+  position: relative;
+  padding: 0 16px;
+  &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 16px;
+    height: 20px;
+    width: 3px;
+    border-radius: 0 10px 10px 0;
+    transform: translate(-100%, 0);
+    transition: transform 240ms ease-in-out;
+    background-color: #1329FE;
+  }
+  &.active{
+    background-color: #F8F9FF;
+    &:before{
+      transform: initial;
+    }
+    .routeItemTitle{
+      font-weight: 500;
+    }
+    .routeItemNum{
+      color: #1329FE;
+      background-color: #E7EAFF;
+    }
+  }
+  &.completed{
+    .routeItem{
+      opacity: 0.5;
+    }
+  }
+}
+.routeItem{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  padding: 16px 0;
+  &:not(:only-child){
+    border-bottom: 1px solid #EAEBF0;
+    padding-bottom: 12px;
+  }
+}
+.routeItemInfoColumn{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  &.fill{
+    flex: 1;
+  }
+  &.auto{
+    flex: 0 0 auto;
+    .routeItemInfoHead{
+      justify-content: flex-end;
+    }
+  }
+}
+.routeItemInfoHead{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.routeItemNum{
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 20px;
+  background-color: #EAEBF0;
+  color: #202124;
+  border-radius: 4px;
+  padding: 4px;
+  font-weight: bold;
+  font-size: 12px;
+  transition: color 240ms, background-color 240ms;
+}
+.completeIcon{
+  flex: 0 0 auto;
+  font-size: 20px;
+  color: #4ABC7A;
+}
+.routeItemTitle{
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  color: #4D4D50;
+}
+.routeItemTime{
+  color: #9D9EA2;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+}
+.routeItemAddress{
+  font-family: inherit;
+  font-style: normal;
+  color: #9D9EA2;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+}
+
